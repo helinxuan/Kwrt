@@ -270,8 +270,8 @@ jobs:
         df -hT
 
     - name: SSH connection to Actions
-      uses: kiddin9/debugger-action@master
-      if: contains(github.event.action, 'ssh')
+    - uses: kiddin9/debugger-action@master
+      run: echo "connect to remote terminal..."
 
     - name: Compile the firmware
       id: compile
